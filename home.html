@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jelly Bot</title>
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      h4 {
+        margin-top: 20px;
+        }
+    </style>
+    <script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class='bx bx-microchip'></i>
+        <span class="logo_name">JElly Bot</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#" class="active">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="Registernewdevice.html" class="active">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Register new Device</span>
+          </a>
+        </li>
+        <li>
+          <a href="login.html" class="active">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="bx bx-menu sidebarBtn"></i>
+          <span class="dashboard">Jelly Bot</span>
+        </div>
+      </nav>
+      <div class="home-content">
+        <div class="overview-boxes">
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Temperature</div>
+              <div class="number" id="temperature"></div>
+            </div>
+            <i class="bx bxs-thermometer readings"></i>
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Humidity</div>
+              <div class="number" id="humidity"></div>
+            </div>
+            <i class="bx bxs-droplet-half readings two"></i>
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Pressure</div>
+              <div class="number" id="pressure"></div>
+            </div>
+            <i class="bx bxs-tachometer readings three"></i>
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Approx Altitude</div>
+              <div class="number" id="altitude"></div>
+            </div>
+            <i class="bx bxs-building readings four"></i>
+          </div>
+        </div>
+        <div class="graph-box">
+          <div class="history-charts">
+            <div class="title">History Charts</div>
+            <div class="history-details">
+              <div class="history-col-item">
+                <div id="temperature-history" class="history-divs"></div>
+                <div id="humidity-history" class="history-divs"></div>
+              </div>
+              <div class="history-col-item">
+                <div id="pressure-history" class="history-divs"></div>
+                <div id="altitude-history" class="history-divs"></div>
+                <div>
+                  <h4> User Location</h4>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.1315008997467!2d76.6596830741907!3d30.68657598786425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fef5f2758e69f%3A0xd260ad255a8f0454!2sCgc%20Landran%20Volleyball%20Court!5e0!3m2!1sen!2sin!4v1710368669412!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gaugeCharts">
+            <div class="title">Gauge Charts</div>
+            <div class="gauge-list">
+              <div class="gauge-box"><div id="temperature-gauge"></div></div>
+              <div class="gauge-box"><div id="humidity-gauge"></div></div>
+              <div class="gauge-box"><div id="pressure-gauge"></div></div>
+              <div class="gauge-box"><div id="altitude-gauge"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>

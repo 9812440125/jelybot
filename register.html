@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://thumbsnap.com/i/mi9DFKRM.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-top: 30px;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 360px;
+            width: 100%;
+            overflow-y: auto;
+            max-height: calc(100vh - 40px);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        select {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        input[type="button"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        .login-link {
+            margin-top: 10px;
+            color: #007bff;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function ddlogin() {
+            window.location.href = "login.html";
+        }
+        function ddregister() {
+            window.location.href = "dsds.html";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Create Your Account</h1>
+        <h2>Join the Jelly Bot Community</h2>
+        <form>
+            <label for="username" >Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="100">
+            <label for="professionalSwimmer">Are you a professional swimmer?</label>
+            <select id="professionalSwimmer" name="professionalSwimmer">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <label for="medicalIssue">Do you have any medical issues?</label>
+            <input type="text" id="medicalIssue" name="medicalIssue">
+            <input type="button" onclick="ddregister()" value="Register">
+        </form>
+        <p class="login-link" onclick="ddlogin()">Already have an account? Login here</p>
+    </div>
+</body>
+</html>

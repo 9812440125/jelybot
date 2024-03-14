@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://thumbsnap.com/i/mi9DFKRM.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 360px;
+            width: 100%;
+            
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        input[type="button"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        .forgot-password {
+            margin-top: 10px;
+            color: #007bff;
+            cursor: pointer;
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .or-divider {
+            text-align: center;
+            margin: 20px 0;
+            color: #555;
+        }
+
+        .register-btn {
+            text-align: center;
+            font-size: 16px;
+            color: #007bff;
+            cursor: pointer;
+        }
+
+        .register-btn:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var errorMessage = document.getElementById("error-message");
+
+            // Check if the username and password match the predefined values
+            if (username === "vaibhavgupta" && password === "jellybot") {
+                // Redirect to index.html
+                window.location.href = "index.html";
+            } else {
+                errorMessage.innerText = "Invalid username or password. Please try again.";
+            }
+        }
+
+        function register() {
+            window.location.href = "register.html";
+        }
+
+        function forgotpassword() {
+            window.location.href = "forgotpassword.html";
+        }
+
+        // Allow hitting Enter to login
+        document.addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                login();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Login to Account</h1>
+        <h2>Access to the most powerful tool in the entire Sea industry.</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <input type="button" value="Login" onclick="login()">
+            <p class="forgot-password" onclick="forgotpassword()">Forgot Password</p>
+        </form>
+        <p class="or-divider">or</p>
+        <p class="register-btn" onclick="register()">Register Your Account</p>
+    </div>
+</body>
+</html>
